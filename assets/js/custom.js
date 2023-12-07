@@ -35,7 +35,7 @@ Project: Resume html
         window.ityped.init(document.querySelector(".cv_profile_name"), {
           strings: [
             "Christophe",
-            "Developpeur web !",
+            "Developpeur web",
             " Junior ",
             "Full stack !",
           ],
