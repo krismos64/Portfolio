@@ -964,7 +964,6 @@ section {
 *******************************************************/
 
 .cv_experience_wrapper {
-  background-image: url(https://via.placeholder.com/1920x594);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -975,7 +974,6 @@ section {
 .cv_experience_wrapper::before {
   content: "";
   position: absolute;
-  background-image: url(https://via.placeholder.com/1920x546);
   background-repeat: no-repeat;
   background-size: auto;
   width: 100%;
@@ -1151,7 +1149,6 @@ section {
 .cv_portfolio_wrapper {
   position: relative;
   padding: 120px 0 90px;
-  background-image: url(https://via.placeholder.com/1920x1038);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1304,7 +1301,6 @@ section {
 .cv_do_wrapper {
   position: relative;
   padding: 120px 0 90px;
-  background-image: url(https://via.placeholder.com/1920x743);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1402,7 +1398,6 @@ section {
 
 .cv_award_wrapper {
   position: relative;
-  background-image: url(https://via.placeholder.com/1920x382);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1563,7 +1558,6 @@ section {
 
 .cv_project_wrapper {
   position: relative;
-  background-image: url(https://via.placeholder.com/1920x706);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1573,7 +1567,6 @@ section {
 .cv_project_wrapper::before {
   content: "";
   position: absolute;
-  background-image: url(https://via.placeholder.com/1898x596);
   background-repeat: no-repeat;
   background-size: auto;
   width: 100%;
