@@ -1312,12 +1312,6 @@ section {
   position: absolute;
   max-width: 1459px;
   height: 2px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(217, 217, 217, 0) 0%,
-    rgba(217, 217, 217, 0.9999999999999999) 48%,
-    rgba(217, 217, 217, 0) 100%
-  );
   width: 100%;
   bottom: 0;
   opacity: 0.2;
