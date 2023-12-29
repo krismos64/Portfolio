@@ -1261,6 +1261,8 @@ section {
 }
 
 .cv_gallery_img img {
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -1277,7 +1279,7 @@ section {
 .cv_gallery_img.img-1 img,
 .cv_gallery_img.img-2 img,
 .cv_gallery_img.img-5 img {
-  min-height: 342px;
+  min-height: auto;
 }
 
 .cv_gallery_img.img-3,
