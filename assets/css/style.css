@@ -1208,36 +1208,34 @@ section {
   display: flex;
   gap: 30px;
 }
-
-.cv_gallery_img {
-  max-width: 100%;
-  height: -webkit-fill-available;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.cv_gallery_item.item-1 {
-  max-width: 665px;
+.cv_gallery_item {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
 }
 
-.cv_gallery_item.item-2 {
-  display: flex;
-  gap: 30px;
+.cv_gallery_img {
+  flex: 0 0 33.3333%; /* Ajustez la valeur en fonction du nombre d'images par ligne que vous souhaitez */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.cv_gallery_img img {
+  width: 100%;
+  height: auto;
+}
+
+.cv_gallery_hover {
+  display: none;
+}
+
+.cv_gallery_img:hover .cv_gallery_hover {
+  display: block;
 }
 
 .cv_gallery_small {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-}
-
-.cv_gallery_img.img-4 {
-  min-width: 363px;
 }
 
 .cv_gallery_img .cv_gallery_hover {
