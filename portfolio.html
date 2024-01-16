@@ -1,43 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <!-- Begin Head -->
   <head>
-    <!--=== Required meta tags ===-->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <!--=== custom css ===-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
-    <link
-      rel="shortcut icon"
-      type="image/ico"
-      href="assets/images/favicon.png"
-    />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-    <!--=== custom css ===-->
     <title>Projets</title>
   </head>
   <body>
     <div class="cv_main_wrapper">
-      <!-- Loader Start -->
       <div class="loader">
         <div class="spinner">
           <img src="assets/images/loader.gif" alt="loader" class="img-fluid" />
         </div>
       </div>
-      <!-- Loader End -->
-      <!-- Bottom To Top Start -->
-      <div class="cv_top_icon">
-        <a id="button">
-          <img src="assets/images/gototop.svg" class="img-fluid" />
-        </a>
-      </div>
-      <!-- Bottom To Top End -->
-      <!-- Header Section Start -->
+
       <div class="cv_header_wrapper">
         <div class="cv_container container-fluid">
           <div class="row">
@@ -61,7 +41,7 @@
           </div>
         </div>
       </div>
-      <!-- Navbar Start -->
+
       <div class="cv_header_menu">
         <div class="container-fluid">
           <div class="row">
@@ -106,82 +86,74 @@
           </div>
         </div>
       </div>
-      <!-- Navbar Start -->
-      <!-- Portfolio Section Start -->
+
       <div class="cv_portfolio_wrapper">
         <div class="cv_container container-fluid">
           <div class="row">
             <div class="col-12">
-              <!-- All Tab -->
               <div class="cv_tab_pane" id="tab-1" style="display: block">
                 <div class="cv_gallery_wrapper">
-                  <div class="cv_gallery_item item-1">
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-1">
+                  <!-- Thumbnail grid -->
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="cv_gallery_item item-1">
+                        <!-- Image 1 -->
                         <img src="assets/images/parrot.png" class="img-fluid" />
-                        <span class="cv_gallery_hover">
-                          <p>Site web Garage-parrot</p>
-                          <h4>Site pour garage auto réalisé en Symfony 6</h4>
-                        </span>
                       </div>
-                      <div class="cv_gallery_img img-2">
+                    </div>
+                    <div class="col-md-4">
+                      <div class="cv_gallery_item item-1">
+                        <!-- Image 2 -->
                         <img
                           src="assets/images/krismos-burger.png"
                           class="img-fluid"
                         />
-                        <span class="cv_gallery_hover">
-                          <p>Krismos burger</p>
-                          <h4>
-                            Site réalisé en PHP avec partie administrateur et
-                            base de données
-                          </h4>
-                        </span>
                       </div>
                     </div>
-                    <div class="cv_gallery_img img-3">
-                      <img src="assets/images/morpion.png" class="img-fluid" />
-                      <span class="cv_gallery_hover">
-                        <p>Jeu du morpion</p>
-                        <h4>Réalisé en Javascript</h4>
-                      </span>
-                    </div>
-                  </div>
-                    <div class="cv_gallery_img img-3">
-                      <img src="assets/images/todolist-vert.png" class="img-fluid" />
-                      <span class="cv_gallery_hover">
-                        <p>Krislist</p>
-                        <h4>Réalisé en Javascript</h4>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="cv_gallery_item item-2">
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-5">
+                    <div class="col-md-4">
+                      <div class="cv_gallery_item item-1">
+                        <!-- Image 3 -->
                         <img
-                          src="assets/images/typing-game.png"
+                          src="assets/images/morpion.png"
                           class="img-fluid"
                         />
-                        <span class="cv_gallery_hover">
-                          <p>Typing game</p>
-                          <h4>Jeu de frappe réalisé en Javascript</h4>
-                        </span>
                       </div>
-                      <div class="cv_gallery_img img-6">
+                    </div>
+                    <div class="col-md-4">
+                      <div class="cv_gallery_item item-1">
+                        <!-- Image 4 -->
+                        <img
+                          src="assets/images/todolist-vert.png"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="cv_gallery_item item-1">
+                        <!-- Image 5 -->
                         <img
                           src="assets/images/casse-briques.png"
                           class="img-fluid"
                         />
-                        <span class="cv_gallery_hover">
-                          <p>Le jeu du casse-briques</p>
-                          <h4>Réalisé en Javascript</h4>
-                        </span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="cv_gallery_item item-1">
+                        <!-- Image 6 -->
+                        <img
+                          src="assets/images/typing-game.png"
+                          class="img-fluid"
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
-                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <!-- Footer Section Start -->
       <div class="cv_footer_wrapper">
         <div class="container">
           <div class="row">
@@ -196,18 +168,10 @@
           </div>
         </div>
       </div>
-      <!-- Footer Section End -->
     </div>
-    <!--=== Optional JavaScript ===-->
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/SmoothScroll.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/jquery.countTo.js"></script>
-    <script src="assets/js/ityped.min.js"></script>
     <script src="assets/js/custom.js"></script>
-    <!--=== Optional JavaScript ===-->
   </body>
 </html>

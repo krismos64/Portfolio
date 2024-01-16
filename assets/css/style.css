@@ -1860,3 +1860,40 @@ section {
   display: flex;
   justify-content: flex-end;
 }
+.cv_gallery_item {
+  margin-bottom: 20px;
+}
+
+.cv_gallery_img {
+  position: relative;
+  overflow: hidden;
+}
+
+.cv_gallery_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cv_gallery_img:hover .cv_gallery_hover {
+  opacity: 1;
+}
+
+.cv_gallery_hover p,
+.cv_gallery_hover h4 {
+  margin: 0;
+  padding: 10px;
+}
+
+.cv_gallery_item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
