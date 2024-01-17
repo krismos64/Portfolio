@@ -161,66 +161,6 @@ section {
 .cv_bottom_btn a {
   margin: 15px auto 0;
 }
-
-/********************************************************
-    Go to Top Style
- *******************************************************/
-
-.cv_top_icon a {
-  display: flex;
-  background-color: var(--cv-primary-color);
-  width: 60px;
-  height: 60px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  transition: var(--cv-transition) opacity 0;
-  visibility: hidden;
-  z-index: 1000;
-  cursor: pointer;
-  animation: border-transform 4s linear infinite alternate forwards;
-}
-
-@keyframes border-transform {
-  0% {
-    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
-    transform: translateY(0px);
-  }
-  14% {
-    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
-  }
-  28% {
-    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
-  }
-  42% {
-    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
-  }
-  56% {
-    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
-  }
-  70% {
-    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
-  }
-  84% {
-    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
-  }
-  100% {
-    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
-    transform: translateY(-20px);
-  }
-}
-
-.cv_top_icon a:active {
-  background-color: var(--cv-black-color);
-}
-.cv_top_icon a.show {
-  opacity: 1;
-  visibility: visible;
-}
-
 /********************************************************
     Loader Style
  *******************************************************/
@@ -507,6 +447,8 @@ section {
 .cv_banner_img {
   position: relative;
   text-align: center;
+  opacity: 0.5;
+  width: 80%;
 }
 
 .cv_banner_img::before {
@@ -627,8 +569,8 @@ section {
 }
 
 /* ---------------------------------------------
-                                    2. About Page
-                                    --------------------------------------------- */
+2. About Page
+-------------------------------------------- */
 
 /********************************************************
     About Section Style
@@ -1139,8 +1081,8 @@ section {
 }
 
 /* ---------------------------------------------
-                                    3. Portfolio Page
-                                    --------------------------------------------- */
+3. Portfolio Page
+--------------------------------------------- */
 
 /********************************************************
     Portfolio Section Style
@@ -1214,7 +1156,7 @@ section {
 }
 
 .cv_gallery_img {
-  flex: 0 0 33.3333%; /* Ajustez la valeur en fonction du nombre d'images par ligne que vous souhaitez */
+  flex: 0 0 33.3333%;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -1291,8 +1233,8 @@ section {
 }
 
 /* ---------------------------------------------
-                                    4. Portfolio Page
-                                    --------------------------------------------- */
+4. Portfolio Page
+--------------------------------------------- */
 
 /********************************************************
     Do Section Style
@@ -1735,8 +1677,8 @@ section {
   max-width: 405px;
 }
 /* ---------------------------------------------
-                                    5. Contact Page
-                                    --------------------------------------------- */
+5. Contact Page
+--------------------------------------------- */
 /********************************************************
     Address Section Style
 *******************************************************/
