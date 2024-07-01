@@ -1149,87 +1149,53 @@ section {
 .cv_gallery_wrapper {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .cv_gallery_item {
+  flex: 1 1 calc(33.333% - 30px);
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.cv_gallery_img {
-  flex: 0 0 33.3333%;
-  box-sizing: border-box;
-  padding: 10px;
-}
-
-.cv_gallery_img img {
+.cv_gallery_item img {
   width: 100%;
   height: auto;
-}
-
-.cv_gallery_hover {
-  display: none;
-}
-
-.cv_gallery_img:hover .cv_gallery_hover {
-  display: block;
-}
-
-.cv_gallery_small {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.cv_gallery_img .cv_gallery_hover {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(
-    180deg,
-    rgba(62, 174, 255, 0) 0%,
-    rgba(62, 174, 255, 0.9999999999999999) 100%
-  );
-  padding: 15px 30px;
-  min-height: 204px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  transform: translateY(100%);
-  transition: var(--cv-transition);
-}
-
-.cv_gallery_img img {
-  max-width: 100%;
-  height: auto;
+  max-width: 300px;
+  max-height: 200px;
   object-fit: cover;
 }
 
+.cv_gallery_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
 .cv_gallery_img:hover .cv_gallery_hover {
-  transform: translateY(0);
+  opacity: 1;
 }
 
-.cv_gallery_img.img-1,
-.cv_gallery_img.img-2,
-.cv_gallery_img.img-5 {
-  max-height: 342px;
-}
-
-.cv_gallery_img.img-1 img,
-.cv_gallery_img.img-2 img,
-.cv_gallery_img.img-5 img {
-  min-height: auto;
-}
-
-.cv_gallery_img.img-3,
-.cv_gallery_img.img-6 {
-  max-height: 242px;
-}
-
-.cv_gallery_img.img-3 img,
-.cv_gallery_img.img-6 img {
-  min-height: 242px;
+.cv_gallery_hover p,
+.cv_gallery_hover h4 {
+  margin: 0;
+  padding: 10px;
 }
 
 /* ---------------------------------------------
@@ -1838,4 +1804,32 @@ section {
   width: 100%;
   height: auto;
   display: block;
+}
+/* Styles pour les titres et les paragraphes sous les images */
+.cv_gallery_text {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.cv_gallery_text h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cv_gallery_text p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+/* Forcer les conteneurs des images à avoir la même taille */
+.cv_gallery_item {
+  position: relative;
+  overflow: hidden;
+  height: 350px; /* Ajustez la hauteur selon vos besoins */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
