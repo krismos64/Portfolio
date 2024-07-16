@@ -185,29 +185,26 @@ section {
 /********************************************************
     Button Style
  *******************************************************/
-
-.cv_btn {
-  position: relative;
-  background-color: var(--cv-primary-color);
-  color: var(--cv-white-color);
-  font-size: 18px;
-  font-weight: 500;
-  padding: 0 10px;
-  min-height: 45px;
-  min-width: 146px;
-  width: fit-content;
+ .cv_about_btn_wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid transparent;
+  justify-content: start;
+  gap: 20px; /* Espace entre les boutons */
 }
 
-.cv_btn:hover {
-  color: var(--cv-primary-color);
-  background-color: transparent;
-  letter-spacing: 0.5px;
-  border: 1px solid var(--cv-primary-color);
+.cv_about_btn a.cv_btn {
+  display: block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Couleur de fond du bouton */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cv_about_btn a.cv_btn:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+}
+
 }
 
 /********************************************************
