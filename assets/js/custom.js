@@ -36,8 +36,6 @@ Project: Resume html
           strings: [
             "Christophe",
             "Developpeur web",
-            " Junior ",
-            "Full stack !",
           ],
           loop: true,
           typeSpeed: 100,

@@ -151,7 +151,7 @@ p {
 }
 
 section {
-  padding: 90px 0;
+  padding: 130px 0;
 }
 
 .row {
@@ -192,30 +192,37 @@ section {
 }
 
 .cv_about_btn a.cv_btn {
-  display: block;
-  padding: 10px 20px;
-  background-color: #007bff; /* Couleur de fond du bouton */
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease; /* Animation de la couleur de fond */
+  display: inline-block; 
+  padding: 12px 25px;
+  background-color: #007bff; 
+  color: white; 
+  text-align: center; 
+  text-decoration: none; 
+  border-radius: 30px; 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease; 
+  font-weight: bold; 
+  letter-spacing: 1px; 
 }
 
 .cv_about_btn a.cv_btn:hover {
-  background-color: #0056b3; /* Couleur de fond au survol */
+  background-color: #0056b3; 
+  color: #f8f9fa; 
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
+
 
 /********************************************************
     Header Section Style
  *******************************************************/
 
 .cv_header_wrapper {
-  position: absolute;
+
   top: 0;
   left: 0;
   width: 100%;
-  padding: 23px 0;
+  padding: 15px 0;
   z-index: 101;
 }
 
@@ -224,6 +231,7 @@ section {
   align-items: center;
   justify-content: space-between;
 }
+
 /********************************************************
     Navbar Section Style
  *******************************************************/
@@ -382,37 +390,70 @@ section {
 *******************************************************/
 
 .cv_footer_wrapper {
-  background: linear-gradient(90deg, #131c30 44.35%, #101b34 100.68%);
-  padding: 13px 0;
+  background: linear-gradient(90deg, #131c30 44.35%, #101b34 100.68%); /* Dégradé de fond */
+  padding: 20px 0; 
+  color: #ffffff; 
+  border-top: 3px solid #007bff; 
+  box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.5); 
 }
 
 .cv_footer_text {
   text-align: center;
+  font-size: 16px;
+  margin: 10px 0; 
+  letter-spacing: 1px; 
 }
 
-/* ---------------------------------------------
-                                    1. Home Page
-                                    --------------------------------------------- */
+.cv_footer_text p {
+  margin: 5px 0; 
+}
+
+.cv_footer_social {
+  text-align: center; 
+  margin-top: 15px; 
+}
+
+.cv_footer_social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex; 
+}
+
+.cv_footer_social ul li {
+  margin: 0 10px; 
+}
+
+.cv_footer_social ul li a img {
+  width: 30px; 
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cv_footer_social ul li a img:hover {
+  transform: scale(1.2); 
+  opacity: 0.8;
+}
 
 /********************************************************
-    Banner Section Style
-*******************************************************/
+    Banner Section Style - Enhanced
+********************************************************/
 
 .cv_banner_wrapper {
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(135deg, rgba(19,28,48,0.85), rgba(16,27,52,0.85)), 
+              url('assets/images/background.jpg') no-repeat center center; /* Image de fond subtile */
   background-size: cover;
   width: 100%;
   height: 100%;
   position: relative;
   padding-top: 139px;
   overflow: hidden;
+  color: #ffffff; 
 }
 
 .cv_banner_wrapper::before {
   content: "";
   position: absolute;
-
+  background: rgba(0, 0, 0, 0.5); 
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -423,35 +464,27 @@ section {
   background-position: center;
 }
 
-@keyframes cv_ud {
-  0% {
-    transform: translate(0);
-  }
-
-  to {
-    transform: translateY(-10px);
-  }
-}
-
 .cv_banner_img,
 .cv_banner_img img,
 .cv_banner_text,
 .cv_banner_box {
   position: relative;
+  z-index: 1; 
 }
 
 .cv_banner_img {
   position: relative;
   text-align: center;
-  opacity: 0.5;
-  width: 80%;
+  opacity: 0.85; 
+  width: 70%; 
+  margin: 0 auto; 
 }
 
 .cv_banner_img::before {
   max-width: 660px;
   max-height: 696px;
   border-radius: 125px;
-  background-color: #101727;
+  background-color: rgba(16, 27, 52, 0.8); 
   content: "";
   position: absolute;
   width: 100%;
@@ -459,109 +492,83 @@ section {
   left: 0;
   top: 55px;
   margin: auto;
-}
-
-.cv_banner_img .bnr-boy {
-  z-index: 1;
-}
-
-.cv_banner_img .bnr-line {
-  position: absolute;
-  right: -80px;
-  top: -140px;
-  animation: cv_ud 2.5s infinite alternate;
-}
-
-.cv_banner_img .bnr-star {
-  position: absolute;
-  left: -35px;
-  bottom: 110px;
-  animation: cv_ud 2.5s infinite alternate;
-}
-
-.cv_banner_img .bnr-sqr {
-  position: absolute;
-  left: 150px;
-  top: 255px;
-  animation: cv_ud 2.5s infinite alternate;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
 }
 
 .cv_banner_text {
   margin-top: 75px;
+  text-align: center; 
 }
 
 .cv_banner_text h5 {
   display: inline-block;
   background-color: var(--cv-secoundry-color);
   border-radius: 51px;
-  padding: 8px 25px;
+  padding: 10px 30px;
   margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 
 .cv_banner_text h1 {
-  font-size: 70px;
-  font-weight: 700;
+  font-size: 65px; 
+  font-weight: 800;
   line-height: 1.1;
   min-height: 77px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  letter-spacing: 1px;
+  color: #ffffff;
 }
 
 .cv_banner_text h1 span img {
   transform-origin: 70% 70%;
   animation: wave-animation 2.5s infinite;
-  max-width: 20%;
-}
-
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  }
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  max-width: 15%; 
 }
 
 .cv_banner_text .cv_profile_name {
   color: #6cdbc1;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 .cv_banner_text a {
   margin: 25px 0 40px;
   position: relative;
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cv_banner_text a:hover ::before {
-  opacity: 1;
-  visibility: visible;
+.cv_banner_text a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 .cv_banner_box {
-  border-radius: 10px;
-  background-color: rgb(255 255 255 / 9%);
-  border: 1px solid rgb(255 255 255 / 9%);
-  padding: 30px;
-  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+  color: #ffffff;
 }
 
 .cv_banner_box p {
   margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.8;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
 /* ---------------------------------------------
