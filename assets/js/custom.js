@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ".cv_banner_img",
     ".cv_about_img",
     ".cv_about_box",
+    ".cv_skill_box", // Ajoute également les compétences ici
   ];
 
   // Generic IntersectionObserver for multiple elements
@@ -117,16 +118,17 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("appear");
+        observer.unobserve(entry.target); // Arrête d'observer après l'apparition
       }
     });
   });
 
   // Observe each element
   elementsToObserve.forEach((selector) => {
-    const element = document.querySelector(selector);
-    if (element) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((element) => {
       observer.observe(element);
-    }
+    });
   });
 
   // Scroll functionality for overflowing text in gallery
