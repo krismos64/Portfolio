@@ -26,7 +26,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  font-family: "Barlow", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: var(--cv-white-color);
@@ -192,33 +192,22 @@ section {
 }
 
 .cv_about_btn a.cv_btn {
-  display: inline-block; 
-  padding: 12px 25px;
-  background-color: #007bff; 
-  color: white; 
-  text-align: center; 
-  text-decoration: none; 
-  border-radius: 30px; 
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
-  transition: all 0.3s ease; 
-  font-weight: bold; 
-  letter-spacing: 1px; 
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .cv_about_btn a.cv_btn:hover {
-  background-color: #0056b3; 
-  color: #f8f9fa; 
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
+  background-color: #0056b3;
 }
-
 
 /********************************************************
     Header Section Style
  *******************************************************/
 
 .cv_header_wrapper {
-
   top: 0;
   left: 0;
   width: 100%;
@@ -390,47 +379,52 @@ section {
 *******************************************************/
 
 .cv_footer_wrapper {
-  background: linear-gradient(90deg, #131c30 44.35%, #101b34 100.68%); /* Dégradé de fond */
-  padding: 20px 0; 
-  color: #ffffff; 
-  border-top: 3px solid #007bff; 
-  box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.5); 
+  background: linear-gradient(
+    90deg,
+    #131c30 44.35%,
+    #101b34 100.68%
+  ); /* Dégradé de fond */
+  padding: 20px 0;
+  color: #ffffff;
+  border-top: 3px solid #007bff;
+  box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
 }
 
 .cv_footer_text {
   text-align: center;
   font-size: 16px;
-  margin: 10px 0; 
-  letter-spacing: 1px; 
+  margin: 10px 0;
+  letter-spacing: 1px;
 }
 
 .cv_footer_text p {
-  margin: 5px 0; 
+  margin: 5px 0;
 }
 
 .cv_footer_social {
-  text-align: center; 
-  margin-top: 15px; 
+  text-align: center;
+  margin-top: 15px;
 }
 
 .cv_footer_social ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: inline-flex; 
+  display: inline-flex;
 }
 
 .cv_footer_social ul li {
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
 .cv_footer_social ul li a img {
-  width: 30px; 
+  width: 30px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .cv_footer_social ul li a img:hover {
-  transform: scale(1.2); 
+  transform: scale(1.2);
   opacity: 0.8;
 }
 
@@ -439,21 +433,25 @@ section {
 ********************************************************/
 
 .cv_banner_wrapper {
-  background: linear-gradient(135deg, rgba(19,28,48,0.85), rgba(16,27,52,0.85)), 
-              url('assets/images/background.jpg') no-repeat center center; /* Image de fond subtile */
+  background: linear-gradient(
+      135deg,
+      rgba(19, 28, 48, 0.85),
+      rgba(16, 27, 52, 0.85)
+    ),
+    url("assets/images/background.jpg") no-repeat center center; /* Image de fond subtile */
   background-size: cover;
   width: 100%;
   height: 100%;
   position: relative;
   padding-top: 139px;
   overflow: hidden;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 .cv_banner_wrapper::before {
   content: "";
   position: absolute;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -469,22 +467,29 @@ section {
 .cv_banner_text,
 .cv_banner_box {
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .cv_banner_img {
   position: relative;
   text-align: center;
-  opacity: 0.85; 
-  width: 70%; 
-  margin: 0 auto; 
+  opacity: 0;
+  width: 50%;
+  margin: 0 auto;
+  transform: translateY(500px);
+  transition: opacity 1.5s ease, transform 2.5s ease;
+}
+
+.cv_banner_img.appear {
+  opacity: 0.85;
+  transform: translateY(0);
 }
 
 .cv_banner_img::before {
   max-width: 660px;
   max-height: 696px;
   border-radius: 125px;
-  background-color: rgba(16, 27, 52, 0.8); 
+  background-color: rgba(16, 27, 52, 0.8);
   content: "";
   position: absolute;
   width: 100%;
@@ -492,12 +497,11 @@ section {
   left: 0;
   top: 55px;
   margin: auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
-
 .cv_banner_text {
   margin-top: 75px;
-  text-align: center; 
+  text-align: center;
 }
 
 .cv_banner_text h5 {
@@ -513,11 +517,11 @@ section {
 }
 
 .cv_banner_text h1 {
-  font-size: 65px; 
+  font-size: 65px;
   font-weight: 800;
   line-height: 1.1;
   min-height: 77px;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   letter-spacing: 1px;
   color: #ffffff;
 }
@@ -525,7 +529,7 @@ section {
 .cv_banner_text h1 span img {
   transform-origin: 70% 70%;
   animation: wave-animation 2.5s infinite;
-  max-width: 15%; 
+  max-width: 15%;
 }
 
 .cv_banner_text .cv_profile_name {
@@ -558,19 +562,35 @@ section {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 40px;
+  padding: 30px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   color: #ffffff;
+  transition: transform 2.9s ease, background-color 1.3s ease,
+    box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .cv_banner_box p {
   margin-top: 10px;
   font-size: 16px;
   line-height: 1.8;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Animation au survol */
+.cv_banner_box:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation à l'apparition lors du scroll */
+.cv_banner_box.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* ---------------------------------------------
 2. About Page
 -------------------------------------------- */

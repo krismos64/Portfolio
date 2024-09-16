@@ -33,10 +33,7 @@ Project: Resume html
     tyipng: function () {
       if ($(".cv_profile_name").length > 0) {
         window.ityped.init(document.querySelector(".cv_profile_name"), {
-          strings: [
-            "Christophe",
-            "Developpeur web",
-          ],
+          strings: ["Christophe", "Developpeur web"],
           loop: true,
           typeSpeed: 100,
           backSpeed: 50,
@@ -109,3 +106,30 @@ Project: Resume html
   };
   Resume.init();
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const bannerBox = document.querySelector(".cv_banner_box");
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        bannerBox.classList.add("appear");
+      }
+    });
+  });
+
+  observer.observe(bannerBox);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const bannerImg = document.querySelector(".cv_banner_img");
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        bannerImg.classList.add("appear");
+      }
+    });
+  });
+
+  observer.observe(bannerImg);
+});
