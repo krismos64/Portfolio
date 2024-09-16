@@ -133,3 +133,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(bannerImg);
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutImage = document.querySelector(".cv_about_img");
+  const aboutBox = document.querySelector(".cv_about_box");
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("appear");
+      }
+    });
+  });
+
+  observer.observe(aboutImage);
+  observer.observe(aboutBox);
+});
