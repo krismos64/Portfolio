@@ -7,39 +7,48 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="assets/images/favicon.png"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Projets</title>
     <meta
       name="description"
-      content="Portfolio des projets de Christophe Mostefaoui, développeur web full stack en reconversion. Découvrez mes projets et compétences."
+      content="Portfolio des projets de Christophe Mostefaoui, développeur web. Découvrez mes projets et compétences."
     />
     <meta
       name="keywords"
-      content="Christophe Mostefaoui, développeur web, portfolio, projets, compétences, front-end, back-end"
-    />
+      content="Christophe Mostefaoui, krismos, développeur web, portfolio, projets, compétences, front-end, back-end, Symfony,"
+      />
   </head>
   <body>
     <div class="cv_main_wrapper">
+      <!-- Loader Start -->
       <div class="loader">
         <div class="spinner">
-          <img
-            src="assets/images/loader.gif"
-            alt="Chargement"
-            class="img-fluid"
-          />
+          <img src="assets/images/loader.gif" alt="loader" class="img-fluid" />
         </div>
       </div>
-
+      <!-- Loader End -->
+      <!-- Bottom To Top Start -->
+      <div class="cv_top_icon">
+        <a id="button">
+          <img src="assets/images/gototop.svg" alt="Flêche vers le haut" class="img-fluid" />
+        </a>
+      </div>
+      <!-- Bottom To Top End -->
+      <!-- Header Section Start -->
       <div class="cv_header_wrapper">
         <div class="cv_container container-fluid">
           <div class="row">
             <div class="col-12">
               <div class="cv_navbar">
-                <a
-                  href="javascript:void(0);"
-                  class="cv_toggle_btn"
-                  aria-label="Menu Toggle"
-                >
+                <a href="javascript:void(0);" class="cv_toggle_btn">
                   <svg class="ham hamRotate ham7" viewBox="0 0 100 100">
                     <path
                       class="line top"
@@ -57,7 +66,7 @@
           </div>
         </div>
       </div>
-
+      <!-- Navbar Start -->
       <div class="cv_header_menu">
         <div class="container-fluid">
           <div class="row">
@@ -65,19 +74,19 @@
               <div class="cv_menus_wrapper">
                 <ul class="cv_menus">
                   <li>
-                    <a class="active" href="index.html">Accueil</a>
+                    <a class="active" href="index.html" title="Accueil">Accueil</a>
                   </li>
                   <li>
-                    <a href="about.html">À propos de moi</a>
+                    <a href="about.html" title="À propos de moi">À propos de moi</a>
                   </li>
                   <li>
-                    <a href="portfolio.html">Mes projets</a>
+                    <a href="portfolio.html" title="Mes projets">Mes projets</a>
                   </li>
                   <li>
-                    <a href="strength.html">Compétences</a>
+                    <a href="strength.html" title="Compétences">Compétences</a>
                   </li>
                   <li>
-                    <a href="contact.html">Contactez-moi</a>
+                    <a href="contact.html" title="Contactez-moi">Contactez-moi</a>
                   </li>
                 </ul>
                 <div class="cv_header_social">
@@ -85,16 +94,12 @@
                   <ul>
                     <li>
                       <a href="https://github.com/krismos64">
-                        <img src="assets/images/github-logo.png" />
+                        <img src="assets/images/github-logo.png" alt="GitHub Logo" />
                       </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/christophemostefaoui"
-                      >
-                        <img src="assets/images/in.svg" />
+                      <a href="https://www.linkedin.com/in/christophemostefaoui">
+                        <img src="assets/images/in.svg" alt="LinkedIn Logo" />
                       </a>
-                    </li>
+                    </li>                    
                   </ul>
                 </div>
               </div>
@@ -102,7 +107,7 @@
           </div>
         </div>
       </div>
-
+      <!-- Navbar End -->
       <div class="cv_portfolio_wrapper">
         <div class="cv_container container-fluid">
           <div class="row">
@@ -128,8 +133,11 @@
                           <p>Site web réalisé avec Symfony pour une personne désirant exposer 
                             ses créations de maquillage/ongles avec un espace administrateur 
                             pour gérer les publications.</p>
-                        </div>
-                      </div>
+                        </div>                      
+                      </div>     
+                      <div class="cv_about_btn">
+                        <a href="https://github.com/krismos64/stacymakeupcreations" class="cv_btn">GitHub</a>
+                      </div>       
                     </div>
                     <div class="col-md-4">
                       <div class="cv_gallery_item item-1">
@@ -146,17 +154,21 @@
                           <p>
                             Site web réalisé avec Symfony dans le cadre de
                             l'examen final de la formation "DWWM", avec espace
-                            administrateur.                          
+                            administrateur. Voir le lien ci-dessous pour le dossier projet avec les détails de la conception.                         
                           </p>
                         </div>
+                      
+                      </div>
                         <div class="cv_about_btn">
                           <a
                             href="assets/images/dossier projet FINAL.pdf"
                             class="cv_btn"
-                            >Dossier projet avec les détails de la conception</a
+                            >Dossier projet</a
                           >
                         </div>
-                      </div>
+                        <div class="cv_about_btn">
+                          <a href="https://github.com/krismos64/GarageAuto" class="cv_btn">GitHub</a>
+                        </div>       
                     </div>
                     <div class="col-md-4">
                       <div class="cv_gallery_item item-1">
@@ -175,6 +187,9 @@
                           <p>Jeu du morpion réalisé en Javascript.</p>
                         </div>
                       </div>
+                      <div class="cv_about_btn">
+                        <a href="https://github.com/krismos64/JeuDuMorpion" class="cv_btn">GitHub</a>
+                      </div>    
                     </div>
                     <div class="col-md-4">
                       <div class="cv_gallery_item item-1">
@@ -191,6 +206,9 @@
                           <p>Site de todolist réalisé en javascript</p>
                         </div>
                       </div>
+                      <div class="cv_about_btn">
+                        <a href="https://github.com/krismos64/Todolist" class="cv_btn">GitHub</a>
+                      </div>    
                     </div>
                     <div class="col-md-4">
                       <div class="cv_gallery_item item-1">
@@ -210,6 +228,9 @@
                           <p>Jeu du casse-briques réalisé en Javascript</p>
                         </div>
                       </div>
+                      <div class="cv_about_btn">
+                        <a href="https://github.com/krismos64/CasseBriques" class="cv_btn">GitHub</a>
+                      </div>    
                     </div>
                     <div class="col-md-4">
                       <div class="cv_gallery_item item-1">
@@ -232,6 +253,9 @@
                           </p>
                         </div>
                       </div>
+                      <div class="cv_about_btn">
+                        <a href="https://github.com/krismos64/TypingGame" class="cv_btn">GitHub</a>
+                      </div>    
                     </div>
                   </div>
                 </div>

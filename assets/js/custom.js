@@ -1,7 +1,3 @@
-/*--------------------- Copyright (c) 2023 -----------------------
-[Master Javascript]
-Project: Resume html
--------------------------------------------------------------------*/
 (function ($) {
   "use strict";
   var Resume = {
@@ -14,9 +10,8 @@ Project: Resume html
       } else {
         return;
       }
-      /*-------------- Resume Functions Calling ---------------------------------------------------
-			------------------------------------------------------------------------------------------------*/
 
+      // Functions Calling
       this.tyipng();
       this.bottom_top();
       this.loader();
@@ -25,9 +20,6 @@ Project: Resume html
       this.port_tab();
       this.counter();
     },
-
-    /*-------------- Resume Functions Calling ---------------------------------------------------
-		--------------------------------------------------------------------------------------------------*/
 
     // Typing Effect
     tyipng: function () {
@@ -63,7 +55,7 @@ Project: Resume html
       }
     },
 
-    // loader
+    // Loader
     loader: function () {
       jQuery(window).on("load", function () {
         $(".loader").fadeOut();
@@ -71,13 +63,14 @@ Project: Resume html
       });
     },
 
-    // toggle menu
+    // Toggle menu
     toggle_menu: function () {
       $(".cv_toggle_btn, .cv_menu_close").on("click", function () {
         $("body").toggleClass("menu-open");
       });
     },
 
+    // Copy year
     copy_right: function () {
       if ($("#copyYear").length > 0) {
         document.getElementById("copyYear").innerHTML =
@@ -85,6 +78,7 @@ Project: Resume html
       }
     },
 
+    // Portfolio tabs
     port_tab: function () {
       $(".cv_port_tab li a").on("click", function () {
         var target = $(this).attr("data-rel");
@@ -98,6 +92,7 @@ Project: Resume html
       });
     },
 
+    // Counter
     counter: function () {
       $(".timer").appear(function () {
         $(this).countTo();
@@ -107,36 +102,17 @@ Project: Resume html
   Resume.init();
 })(jQuery);
 
+// DOMContentLoaded event handler
 document.addEventListener("DOMContentLoaded", function () {
-  const bannerBox = document.querySelector(".cv_banner_box");
+  // Elements to animate on scroll
+  const elementsToObserve = [
+    ".cv_banner_box",
+    ".cv_banner_img",
+    ".cv_about_img",
+    ".cv_about_box",
+  ];
 
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        bannerBox.classList.add("appear");
-      }
-    });
-  });
-
-  observer.observe(bannerBox);
-});
-document.addEventListener("DOMContentLoaded", function () {
-  const bannerImg = document.querySelector(".cv_banner_img");
-
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        bannerImg.classList.add("appear");
-      }
-    });
-  });
-
-  observer.observe(bannerImg);
-});
-document.addEventListener("DOMContentLoaded", function () {
-  const aboutImage = document.querySelector(".cv_about_img");
-  const aboutBox = document.querySelector(".cv_about_box");
-
+  // Generic IntersectionObserver for multiple elements
   const observer = new IntersectionObserver(function (entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -145,6 +121,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  observer.observe(aboutImage);
-  observer.observe(aboutBox);
+  // Observe each element
+  elementsToObserve.forEach((selector) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      observer.observe(element);
+    }
+  });
+
+  // Scroll functionality for overflowing text in gallery
+  const galleryItems = document.querySelectorAll(".cv_gallery_text");
+
+  galleryItems.forEach((item) => {
+    const contentHeight = item.scrollHeight;
+    const containerHeight = item.clientHeight;
+
+    // Check if the text overflows
+    if (contentHeight > containerHeight) {
+      item.classList.add("scrollable");
+
+      // Create scroll arrow
+      const scrollArrow = document.createElement("div");
+      scrollArrow.classList.add("cv_scroll_arrow");
+      scrollArrow.innerHTML = "↓";
+
+      item.appendChild(scrollArrow);
+
+      // Scroll on arrow click
+      scrollArrow.addEventListener("click", function () {
+        item.scrollTop += 50;
+      });
+    }
+  });
 });
