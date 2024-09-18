@@ -211,9 +211,9 @@ section {
   background-color: #0056b3;
 }
 
-/********************************************************
-    Header Section Style
- *******************************************************/
+/*******************************************************
+  Header Section Style
+*******************************************************/
 
 .cv_header_wrapper {
   top: 0;
@@ -229,129 +229,156 @@ section {
   justify-content: space-between;
 }
 
-/********************************************************
-    Navbar Section Style
- *******************************************************/
+/* Navbar Section Style */
+/* Styles communs pour la navbar */
 .cv_header_menu {
   position: fixed;
   z-index: 100;
   width: 100%;
-  height: 100%;
-  left: 0;
   top: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s ease;
+  left: 0;
+  transition: all 0.5s ease;
   display: flex;
-  align-items: flex-end;
-  padding: 70px 90px 70px 165px;
-  background: rgba(0, 0, 0, 0.8);
-  transform: scale3d(0, 0, 0);
-  backdrop-filter: blur(0);
-  transform-origin: top right;
+  align-items: center;
+  padding: 20px 90px; /* Ajustez les valeurs de padding selon vos préférences */
+  background-color: rgb(15, 24, 45); /* Couleur de fond souhaitée */
 }
 
-.menu-open .cv_header_menu {
-  opacity: 1;
-  visibility: visible;
-  background-color: rgba(28, 28, 28, 0.8);
-  backdrop-filter: blur(8.5px);
-  transform: scale3d(1, 1, 1);
+/* Styles pour le menu en mode desktop */
+@media (min-width: 992px) {
+  .cv_header_menu {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    backdrop-filter: none;
+    left: 0;
+  }
+
+  .cv_menus_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cv_menus_wrapper .cv_menus {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cv_menus_wrapper .cv_menus li {
+    margin-bottom: 0;
+  }
+
+  .cv_menus_wrapper .cv_menus li a {
+    color: var(--cv-white-color);
+    font-size: 18px; /* Ajustez la taille de police selon vos préférences */
+    font-weight: 700;
+    position: relative;
+    text-decoration: none;
+  }
+
+  /* Styles pour les liens actifs ou au survol */
+  .cv_menus_wrapper .cv_menus li a:hover,
+  .cv_menus_wrapper .cv_menus li a.active {
+    color: var(--cv-primary-color);
+  }
+
+  /* Masquer le bouton du menu burger en mode desktop */
+  .cv_toggle_btn_mobile {
+    display: none;
+  }
 }
 
-.cv_menus_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 30px 60px;
+/* Styles pour le menu en mode mobile/tablette */
+@media (max-width: 991px) {
+  .cv_header_menu {
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    left: 100%; /* Le menu commence hors écran à droite */
+    transition: all 0.5s ease;
+    backdrop-filter: blur(0);
+    background-color: rgba(15, 24, 45, 0.95);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .menu-open .cv_header_menu {
+    opacity: 1;
+    visibility: visible;
+    left: 0; /* Le menu glisse vers la gauche pour apparaître */
+  }
+
+  .cv_menus_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer verticalement */
+    gap: 30px; /* Ajustez l'espacement selon vos préférences */
+  }
+
+  .cv_menus_wrapper .cv_menus {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cv_menus_wrapper .cv_menus li {
+    margin-bottom: 0;
+  }
+
+  .cv_menus_wrapper .cv_menus li a {
+    font-size: 24px; /* Ajustez la taille de police selon vos préférences */
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* Afficher le bouton du menu burger en mode mobile/tablette */
+  .cv_toggle_btn_mobile {
+    display: block;
+  }
 }
 
-.cv_menus_wrapper .cv_menus li {
-  margin-bottom: 5px;
+/* Styles pour le bouton du menu burger */
+.cv_toggle_btn_mobile {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 101;
+  display: none; /* Sera affiché en mode mobile/tablette */
 }
 
-.cv_menus_wrapper .cv_menus li:last-child {
-  margin-bottom: 0;
+@media (max-width: 991px) {
+  .cv_toggle_btn_mobile {
+    display: block;
+  }
 }
 
-.cv_menus_wrapper .cv_menus li a {
-  color: var(--cv-white-color);
-  font-size: 62px;
-  font-weight: 700;
-  position: relative;
-}
-
-.cv_menus_wrapper .cv_menus li a::before {
-  position: absolute;
-  content: "";
-  width: 56px;
-  height: 4px;
-  background-color: var(--cv-primary-color);
-  top: 50%;
-  left: -75px;
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--cv-transition);
-}
-
-.cv_menus_wrapper .cv_menus li a:hover,
-.cv_menus_wrapper .cv_menus li a.active {
-  color: var(--cv-primary-color);
-}
-
-.cv_menus_wrapper .cv_menus li a:hover::before,
-.cv_menus_wrapper .cv_menus li a.active::before {
-  visibility: visible;
-  opacity: 1;
-}
-
-.cv_header_social {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.cv_header_social::before {
-  position: absolute;
-  content: "";
-  width: 3px;
-  height: 166px;
-  background: var(--cv-primary-color);
-  left: -30px;
-  top: -17px;
-}
-
-.cv_header_social ul {
-  display: inline-flex;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.cv_header_social ul li a img {
-  transition: var(--cv-transition);
-}
-
-.cv_header_social ul li a:hover img {
-  transform: rotate(360deg);
-}
-
+/* Styles pour l'icône du menu burger */
 .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 300ms;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  transition: transform 0.4s;
   user-select: none;
-  width: 50px;
 }
 
-.menu-open .hamRotate {
+.hamRotate.active {
   transform: rotate(45deg);
 }
 
 .line {
   fill: none;
-  transition: stroke-dasharray 300ms, stroke-dashoffset 300ms;
+  transition: stroke-dasharray 0.4s, stroke-dashoffset 0.4s;
   stroke: #fff;
   stroke-width: 6.5;
   stroke-linecap: round;
@@ -361,7 +388,7 @@ section {
   stroke-dasharray: 40 82;
 }
 
-.menu-open .ham7 .top {
+.ham7.active .top {
   stroke-dasharray: 17 82;
   stroke-dashoffset: -62px;
 }
@@ -370,7 +397,7 @@ section {
   stroke-dasharray: 40 111;
 }
 
-.menu-open .ham7 .middle {
+.ham7.active .middle {
   stroke-dashoffset: 23px;
 }
 
@@ -378,10 +405,68 @@ section {
   stroke-dasharray: 40 161;
 }
 
-.menu-open .ham7 .bottom {
+.ham7.active .bottom {
   stroke-dashoffset: -83px;
 }
 
+/* Styles pour les éléments du menu */
+.cv_menus {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .cv_menus {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Centrer les éléments du menu */
+  }
+}
+
+.cv_menus li a {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cv_menus li a:hover,
+.cv_menus li a.active {
+  color: var(--cv-primary-color);
+}
+
+/* Styles pour les icônes sociales */
+.cv_header_social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.cv_header_social h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.cv_header_social ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv_header_social ul li a img {
+  width: 60px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.cv_header_social ul li a:hover img {
+  transform: rotate(360deg);
+}
 /********************************************************
     Footer Section Style
 *******************************************************/
