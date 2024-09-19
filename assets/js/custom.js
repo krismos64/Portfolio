@@ -11,8 +11,8 @@
         return;
       }
 
-      // Appel des fonctions
-      this.typing();
+      // Functions Calling
+      this.tyipng();
       this.bottom_top();
       this.loader();
       this.toggle_menu();
@@ -21,11 +21,11 @@
       this.counter();
     },
 
-    // Effet de saisie
-    typing: function () {
+    // Typing Effect
+    tyipng: function () {
       if ($(".cv_profile_name").length > 0) {
         window.ityped.init(document.querySelector(".cv_profile_name"), {
-          strings: ["Christophe", "Développeur web"],
+          strings: ["Christophe", "Developpeur web"],
           loop: true,
           typeSpeed: 100,
           backSpeed: 50,
@@ -34,7 +34,7 @@
       }
     },
 
-    // Bouton "Retour en haut"
+    // Bottom To Top
     bottom_top: function () {
       if ($("#button").length > 0) {
         var btn = $("#button");
@@ -57,58 +57,20 @@
 
     // Loader
     loader: function () {
-      $(window).on("load", function () {
+      jQuery(window).on("load", function () {
         $(".loader").fadeOut();
         $(".spinner").delay(2000).fadeOut("slow");
       });
     },
 
-    // Gestion du menu
+    // Toggle menu
     toggle_menu: function () {
-      var self = this;
-
-      // Fonction pour vérifier la largeur de l'écran
-      function checkWidth() {
-        var windowSize = $(window).width();
-
-        if (windowSize <= 991) {
-          // Mode mobile/tablette : afficher le menu burger
-          $(".cv_toggle_btn_mobile").show();
-          $(".cv_header_menu").hide();
-
-          // Gestionnaire d'événement pour le menu burger
-          $(".cv_toggle_btn_mobile")
-            .off("click")
-            .on("click", function () {
-              $("body").toggleClass("menu-open"); // Ajout/suppression de la classe menu-open sur le body
-              $(this).toggleClass("active"); // Ajouter une classe active pour l'animation du burger
-
-              // Afficher ou masquer le menu en fonction de la classe menu-open
-              if ($("body").hasClass("menu-open")) {
-                $(".cv_header_menu").show();
-              } else {
-                $(".cv_header_menu").hide();
-              }
-            });
-        } else {
-          // Mode desktop : afficher le menu complet et masquer le bouton burger
-          $(".cv_toggle_btn_mobile").hide();
-          $(".cv_header_menu").show();
-          $("body").removeClass("menu-open"); // S'assurer que la classe est retirée du body
-          $(".cv_toggle_btn_mobile").removeClass("active"); // Réinitialiser le bouton burger
-        }
-      }
-
-      // Exécuter au chargement de la page
-      checkWidth();
-
-      // Exécuter lors du redimensionnement de la fenêtre
-      $(window).resize(function () {
-        checkWidth();
+      $(".cv_toggle_btn, .cv_menu_close").on("click", function () {
+        $("body").toggleClass("menu-open");
       });
     },
 
-    // Copier l'année
+    // Copy year
     copy_right: function () {
       if ($("#copyYear").length > 0) {
         document.getElementById("copyYear").innerHTML =
@@ -116,7 +78,7 @@
       }
     },
 
-    // Onglets du portfolio
+    // Portfolio tabs
     port_tab: function () {
       $(".cv_port_tab li a").on("click", function () {
         var target = $(this).attr("data-rel");
@@ -130,7 +92,7 @@
       });
     },
 
-    // Compteur
+    // Counter
     counter: function () {
       $(".timer").appear(function () {
         $(this).countTo();
@@ -140,18 +102,18 @@
   Resume.init();
 })(jQuery);
 
-// Gestion des animations au scroll
+// DOMContentLoaded event handler
 document.addEventListener("DOMContentLoaded", function () {
-  // Éléments à observer
+  // Elements to animate on scroll
   const elementsToObserve = [
     ".cv_banner_box",
     ".cv_banner_img",
     ".cv_about_img",
     ".cv_about_box",
-    ".cv_skill_box", // Ajout des compétences ici
+    ".cv_skill_box", // Ajoute également les compétences ici
   ];
 
-  // Observer pour les animations
+  // Generic IntersectionObserver for multiple elements
   const observer = new IntersectionObserver(function (entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -161,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Observation de chaque élément
+  // Observe each element
   elementsToObserve.forEach((selector) => {
     const elements = document.querySelectorAll(selector);
     elements.forEach((element) => {
@@ -169,25 +131,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Fonctionnalité de scroll pour le texte débordant dans la galerie
+  // Scroll functionality for overflowing text in gallery
   const galleryItems = document.querySelectorAll(".cv_gallery_text");
 
   galleryItems.forEach((item) => {
     const contentHeight = item.scrollHeight;
     const containerHeight = item.clientHeight;
 
-    // Vérifier si le texte déborde
+    // Check if the text overflows
     if (contentHeight > containerHeight) {
       item.classList.add("scrollable");
 
-      // Créer une flèche de défilement
+      // Create scroll arrow
       const scrollArrow = document.createElement("div");
       scrollArrow.classList.add("cv_scroll_arrow");
       scrollArrow.innerHTML = "↓";
 
       item.appendChild(scrollArrow);
 
-      // Défilement lors du clic sur la flèche
+      // Scroll on arrow click
       scrollArrow.addEventListener("click", function () {
         item.scrollTop += 50;
       });
