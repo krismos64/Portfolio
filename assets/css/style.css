@@ -769,7 +769,7 @@ section {
 
 .cv_about_img {
   opacity: 0;
-  transform: translateY(500px);
+  transform: translateY(100px);
   transition: opacity 2.5s ease, transform 2.5s ease;
 }
 
