@@ -484,8 +484,8 @@ section {
   opacity: 0;
   width: 50%;
   margin: 0 auto;
-  transform: translateY(500px);
-  transition: opacity 1.5s ease, transform 2.5s ease;
+  transform: translateY(200px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .cv_banner_img.appear {

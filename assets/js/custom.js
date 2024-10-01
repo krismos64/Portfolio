@@ -34,6 +34,15 @@
       }
     },
 
+    // Image Appearance Effect
+    imageAppear: function () {
+      $(window).on("load", function () {
+        if ($(".cv_banner_img").length > 0) {
+          $(".cv_banner_img").addClass("appear");
+        }
+      });
+    },
+
     // Bottom To Top
     bottom_top: function () {
       if ($("#button").length > 0) {
