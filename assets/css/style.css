@@ -454,6 +454,7 @@ section {
   padding-top: 139px;
   overflow: hidden;
   color: #ffffff;
+  margin-bottom: 50px;
 }
 
 .cv_banner_wrapper::before {
@@ -2006,13 +2007,14 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: rgb(8, 14, 24);
 }
 
 #blog h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2.5rem;
-  color: #333;
+  color: #b5c1d6;
 }
 
 /* Grille pour les vignettes de blog */
@@ -2024,7 +2026,7 @@ section {
 
 /* Style des vignettes */
 .blog-card {
-  background: #fff;
+  background: #ade4f6;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
