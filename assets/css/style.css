@@ -2001,3 +2001,83 @@ section {
   display: flex;
   flex-direction: column;
 }
+/* Style général de la section blog */
+#blog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#blog h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Grille pour les vignettes de blog */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Style des vignettes */
+.blog-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Style des images */
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Style des titres */
+.blog-card h3 {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+.blog-card h3 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.blog-card h3 a:hover {
+  color: #0077b5; /* Couleur LinkedIn */
+}
+
+/* Style des extraits */
+.blog-excerpt {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 1rem 1rem;
+  line-height: 1.5;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  #blog {
+    padding: 1rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
