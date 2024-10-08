@@ -72,10 +72,11 @@
       });
     },
 
-    // Toggle menu
+    // Toggle Menu
     toggle_menu: function () {
-      $(".cv_toggle_btn, .cv_menu_close").on("click", function () {
-        $("body").toggleClass("menu-open");
+      $(".cv_toggle_btn").on("click", function (e) {
+        e.preventDefault();
+        $(".cv_header_menu").toggleClass("active");
       });
     },
 
@@ -119,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ".cv_banner_img",
     ".cv_about_img",
     ".cv_about_box",
-    ".cv_skill_box", // Ajoute également les compétences ici
+    ".cv_skill_box",
   ];
 
   // Generic IntersectionObserver for multiple elements
@@ -127,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("appear");
-        observer.unobserve(entry.target); // Arrête d'observer après l'apparition
+        observer.unobserve(entry.target);
       }
     });
   });
@@ -147,21 +148,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const contentHeight = item.scrollHeight;
     const containerHeight = item.clientHeight;
 
-    // Check if the text overflows
     if (contentHeight > containerHeight) {
       item.classList.add("scrollable");
 
-      // Create scroll arrow
       const scrollArrow = document.createElement("div");
       scrollArrow.classList.add("cv_scroll_arrow");
       scrollArrow.innerHTML = "↓";
 
       item.appendChild(scrollArrow);
 
-      // Scroll on arrow click
       scrollArrow.addEventListener("click", function () {
         item.scrollTop += 50;
       });
     }
   });
 });
+
+function toggleMenu() {
+  const menu = document.querySelector(".cv_header_menu");
+  const toggleBtn = document.querySelector(".cv_toggle_btn_mobile");
+  const body = document.body;
+
+  body.classList.toggle("menu-open");
+  toggleBtn.classList.toggle("active");
+
+  // Si le menu est fermé, retourne à la page principale
+  if (!body.classList.contains("menu-open")) {
+  }
+}
