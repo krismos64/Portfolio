@@ -1197,7 +1197,46 @@ section {
 /********************************************************
     Portfolio Section Style
 *******************************************************/
+.custom-dropdown .dropdown-toggle {
+  background-color: #3498db; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
+.custom-dropdown .dropdown-toggle:hover {
+  background-color: #1d6fa5; /* Couleur au survol */
+}
+
+.custom-dropdown .dropdown-menu {
+  background-color: #f7f9fc; /* Couleur de fond du menu */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  display: block; /* Afficher le menu pour appliquer l'animation */
+  visibility: hidden;
+}
+
+.custom-dropdown .dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.custom-dropdown .dropdown-item {
+  color: #3498db; /* Couleur du texte des items */
+  padding: 10px 15px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: #e0f3ff; /* Couleur au survol */
+  color: #1d6fa5;
+}
 .cv_portfolio_wrapper {
   position: relative;
   padding: 120px 0 90px;
