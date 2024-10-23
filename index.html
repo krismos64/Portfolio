@@ -74,20 +74,22 @@
         >
       </div>
 
+      <!-- Popup Video commune pour les trois liens -->
       <div class="popup-overlay" id="videoPopup">
         <div class="popup-container">
           <button class="close-button" onclick="closePopup()">×</button>
-          <iframe
-            width="560"
-            height="315"
-            src=""
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
+          <div class="video-wrapper">
+            <iframe
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
+      <!-- Fin Popup Video -->
+
       <!-- logo podcast end-->
 
       <!-- Loader Start -->
@@ -175,7 +177,7 @@
                       </li>
                       <li>
                         <a
-                          href="javascript:void(0);"
+                          ="javascript:void(0);"
                           onclick="openPopup('TJXDgX5yApI')"
                           style="
                             float: right;
@@ -204,7 +206,6 @@
                             >
                               <!-- Fond circulaire -->
                               <circle cx="50" cy="50" r="48" fill="#1a1f2e" />
-
                               <!-- Microphone -->
                               <rect
                                 x="40"
@@ -222,7 +223,6 @@
                                 rx="8"
                                 fill="#d896ff"
                               />
-
                               <!-- Support du micro -->
                               <rect
                                 x="45"
@@ -239,7 +239,6 @@
                                 rx="2"
                                 fill="#bd3dff"
                               />
-
                               <!-- Ondes sonores animées -->
                               <g
                                 stroke="#00ffcc"
@@ -465,6 +464,25 @@
               Je vous présente une nouvelle méthode innovante qui permet aux
               recruteurs intéressés de mieux me connaître : un chatbot
               interactif directement intégré à mon portfolio.
+            </p>
+          </article>
+
+          <!-- Vignette 7 -->
+          <article class="blog-card">
+            <img
+              src="/assets/images/podcast.png"
+              alt="Christophe et le podcast NotebookLM"
+              class="blog-image"
+            />
+            <h3>
+              <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7254840621838782464/"
+                >Un nouveau format pour se présenter en podcast</a
+              >
+            </h3>
+            <p class="blog-excerpt">
+              Je vous partage un podcast de présentation professionnelle généré
+              par NotebookLM en français directement intégré à mon portfolio.
             </p>
           </article>
         </div>

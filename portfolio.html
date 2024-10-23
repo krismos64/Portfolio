@@ -71,20 +71,22 @@
         >
       </div>
 
+      <!-- Popup Video commune pour les trois liens -->
       <div class="popup-overlay" id="videoPopup">
         <div class="popup-container">
           <button class="close-button" onclick="closePopup()">×</button>
-          <iframe
-            width="560"
-            height="315"
-            src=""
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
+          <div class="video-wrapper">
+            <iframe
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
+      <!-- Fin Popup Video -->
+
       <!-- logo podcast end-->
 
       <!-- Loader Start -->
@@ -172,7 +174,7 @@
                       </li>
                       <li>
                         <a
-                          href="javascript:void(0);"
+                          ="javascript:void(0);"
                           onclick="openPopup('TJXDgX5yApI')"
                           style="
                             float: right;
@@ -201,7 +203,6 @@
                             >
                               <!-- Fond circulaire -->
                               <circle cx="50" cy="50" r="48" fill="#1a1f2e" />
-
                               <!-- Microphone -->
                               <rect
                                 x="40"
@@ -219,7 +220,6 @@
                                 rx="8"
                                 fill="#d896ff"
                               />
-
                               <!-- Support du micro -->
                               <rect
                                 x="45"
@@ -236,7 +236,6 @@
                                 rx="2"
                                 fill="#bd3dff"
                               />
-
                               <!-- Ondes sonores animées -->
                               <g
                                 stroke="#00ffcc"
