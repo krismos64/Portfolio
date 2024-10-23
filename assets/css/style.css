@@ -2334,3 +2334,18 @@ section {
   font-weight: bold;
   box-shadow: 0 0 10px rgba(189, 61, 255, 0.5);
 }
+
+.audio-container {
+  padding: 10px;
+  min-width: 200px;
+}
+
+#podcastAudio {
+  display: none;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.dropdown-menu {
+  min-width: 250px;
+}

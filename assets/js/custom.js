@@ -191,3 +191,12 @@ function closePopup() {
   iframe.src = "";
   popup.classList.remove("active");
 }
+function playAudio() {
+  var audio = document.getElementById("podcastAudio");
+  audio.style.display = "block"; // Rend le lecteur visible
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
