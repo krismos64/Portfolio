@@ -176,3 +176,18 @@ function toggleMenu() {
   if (!body.classList.contains("menu-open")) {
   }
 }
+
+// Fonctions pour la popup du podcast
+function openPopup(videoId) {
+  const popup = document.getElementById("videoPopup");
+  const iframe = popup.querySelector("iframe");
+  iframe.src = `https://www.youtube.com/embed/${videoId}`;
+  popup.classList.add("active");
+}
+
+function closePopup() {
+  const popup = document.getElementById("videoPopup");
+  const iframe = popup.querySelector("iframe");
+  iframe.src = "";
+  popup.classList.remove("active");
+}

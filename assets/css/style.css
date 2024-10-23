@@ -2172,3 +2172,147 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/********************************************************
+   Logo Podcast style
+*******************************************************/
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 2px #bd3dff);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px #bd3dff);
+  }
+  100% {
+    filter: drop-shadow(0 0 2px #bd3dff);
+  }
+}
+
+@keyframes wave {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -30;
+    opacity: 0.4;
+  }
+}
+
+.podcast-container {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  background: transparent;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.podcast-icon {
+  width: 100px;
+  height: 100px;
+  animation: pulse 2s infinite ease-in-out, glow 3s infinite ease-in-out;
+}
+
+.podcast-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+  max-width: 250px;
+  text-shadow: 0 0 10px rgba(189, 61, 255, 0.5);
+}
+
+.podcast-container:hover .podcast-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sound-wave {
+  animation: wave 1s ease-in-out infinite;
+}
+
+.sound-wave:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.sound-wave:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.sound-wave:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 17, 23, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-container {
+  background: #1a1f2e;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 30px rgba(189, 61, 255, 0.2);
+}
+
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup-overlay.active .popup-container {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.close-button {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #bd3dff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(189, 61, 255, 0.5);
+}
